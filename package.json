@@ -1,5 +1,5 @@
 {
-  "name": "@vanackej/risco-mqtt-local",
+  "name": "teruggim/risco-mqtt-local",
   "version": "0.4.1",
   "description": "Node Risco Mqtt using local panel API",
   "main": "dist/main.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vanackej/risco-mqtt-local"
+    "url": "https://github.com/teruggim/risco-mqtt-local"
   },
   "keywords": [
     "risco",
