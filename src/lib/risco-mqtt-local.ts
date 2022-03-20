@@ -248,12 +248,12 @@ export function riscoMqttHomeAssistant(userConfig: RiscoMQTTConfig) {
       }), { qos: 1, retain: true });
     }
     let zoneStatus = zone.Open ? '1' : '0';
-    mqttClient.publish(`${ALARM_TOPIC}/zone/${zone.Id}/status`, zoneStatus);
+    mqttClient.publish(`${ALARM_TOPIC}/zone/${zone.Id}/status`, zoneStatus, { qos: 1, retain: true });
     logger.verbose(`[Panel => MQTT] Published zone status ${zoneStatus} on zone ${zone.Label}`);
   }
 
   function publishZoneBypassStateChange(zone: Zone) {
-    mqttClient.publish(`${ALARM_TOPIC}/zone/${zone.Id}-bypass/status`, zone.Bypass ? '1' : '0');
+    mqttClient.publish(`${ALARM_TOPIC}/zone/${zone.Id}-bypass/status`, zone.Bypass ? '1' : '0', { qos: 1, retain: true });
     logger.verbose(`[Panel => MQTT] Published zone bypass status ${zone.Bypass} on zone ${zone.Label}`);
   }
 
