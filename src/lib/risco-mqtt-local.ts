@@ -284,9 +284,9 @@ export function riscoMqttHomeAssistant(userConfig: RiscoMQTTConfig) {
   function getDeviceInfo() {
     return {
       manufacturer: 'Risco',
-      model: `${panel.riscoComm.panelInfo.PanelModel}/${panel.riscoComm.panelInfo.PanelType}`,
+      model: `${panel.riscoComm.panelInfo.PanelModel}`,
       name: panel.riscoComm.panelInfo.PanelModel,
-      sw_version: panel.riscoComm.panelInfo.PanelFW,
+      sw_version: `${panel.riscoComm.panelInfo.PanelType}`,
       identifiers: `risco-alarm-panel`,
     };
   }
